@@ -1,0 +1,82 @@
+/* Navbar.css */
+.navbar {
+    
+    background-color: rgba(0, 0, 0, 0.512);
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: fixed;
+     top: 0;
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 10px;
+    /* background: transparent;
+       backdrop-filter: blur(10px); */
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    
+    text-transform: uppercase;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Adjust the gap as needed */
+  }
+  
+  .nav-item {
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff; /* Set the font color to white */
+  }
+  
+  .nav-link:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 4.5);
+    transform: scale(1.1);
+  transition: transform 0.3s ease;
+  }
+  .mobile-menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hide the mobile menu icon */
+  }
+  
+  /* Styles for Mobile Menu */
+  @media (max-width: 768px) {
+    .mobile-menu-icon {
+      display: block; /* Display the mobile menu icon */
+    }
+  
+    .nav-links {
+      display: none; /* Hide the navigation links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust as needed to avoid overlapping with the logo */
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.512);
+      z-index: 999;
+    }
+  
+    .nav-links.mobile-menu-open {
+      display: flex; /* Display the navigation links when mobile menu is open */
+    }
+  
+    .nav-item {
+      font-size: 30px;
+    }
+  }
+  
